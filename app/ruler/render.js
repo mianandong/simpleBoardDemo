@@ -12,7 +12,7 @@ export default class Ruler extends React.Component {
 
         return (
             <div id='rule-component'>
-                xuwei
+                {data.word}
             </div>
         );
     }

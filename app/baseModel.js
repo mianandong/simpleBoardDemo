@@ -1,10 +1,4 @@
 export default class BaseModel {
-    constructor(props) {
-        this.data = {
-            x: 0,
-            y: 0
-        };
-    }
 
     set = (key, vaule) => {
         this.data[key] = vaule;
@@ -23,7 +17,15 @@ export default class BaseModel {
     }
 
     static create() {
-        return new this();
+        const component = new this();
+        component.data = {
+            x: 0,
+            y: 0,
+            width: 40,
+            height: 40,
+            ...component.data
+        }
+        return component;
     }
 
     move = (x, y) => {

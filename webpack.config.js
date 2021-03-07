@@ -1,11 +1,12 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
   entry: './app/index.js',
   output: {
       path: path.resolve(__dirname, 'dist'),
-      filename: 'chunk.js'
+      filename: '[name].[contenthash].js'
   },
   module: {
       rules: [
@@ -85,4 +86,13 @@ module.exports = {
   devServer: {
     contentBase: './dist',
   },
+  /* 代码分离 */
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
+  plugins: [
+    new HtmlWebpackPlugin({ template: './dist/index.html' }),
+  ],
 }

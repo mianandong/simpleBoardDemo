@@ -10,7 +10,6 @@ export default class ComponentManager {
     getModuleByType(type) {
         let comp = this.elements.get(type);
         if (comp) {
-            console.log(comp);
             return comp.model;
         }
     }

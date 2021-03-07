@@ -7,9 +7,7 @@ export default class RulerModel extends BaseModel {
             width: 80,
             height: 80,
             color: 'red',
-            x: 100,
-            y: 0
+            word: 'hello word'
         }
-        window.xuwei = this.move;
     }
 }

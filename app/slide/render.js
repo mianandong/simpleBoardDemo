@@ -5,8 +5,6 @@ import './index.css';
 export default class Slide extends React.Component {
     constructor(props) {
         super(props);
-        this.model = this.props.model;
-        this.count = 0;
     }
 
     generatorComponent = (type) => {
@@ -14,12 +12,13 @@ export default class Slide extends React.Component {
     }
 
     addElement = () => {
-        this.model.addElement('Ruler');
+        const { model } = this.props;
+        model.addElement('Ruler');
     }
 
     render = () => {
         let components = [];
-        const { data } = this.model;
+        const { data } = this.props.model;
         console.log('===slide data===', data);
         const { elements } = data;
         elements.forEach(elementType => {

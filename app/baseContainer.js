@@ -9,10 +9,11 @@ export default class BaseContainer extends React.Component {
             // 调用类的静态方法，返回XXXModel的实例，this.model是一个对象
             this.model = this.ComponentModelStruct.create();
             console.log('===create model===', this.model);
-            // 将state指向model.data
-            this.state = this.model.data;
             // 为数据变更注册回调
-            this.model.onChange(this.setNewData);
+            this.model.onChange((newData) => {
+                console.log('===call setState===');
+                this.setState(newData);
+            });
         }
         this.self = this;
         this.dragging = false;
@@ -20,18 +21,13 @@ export default class BaseContainer extends React.Component {
         this.tTop = 0;
         this.originX = 0;
         this.originY = 0;
-    }
-
-    setNewData = (data) => {
-        console.log('===call setState===', data);
-        this.setState(data);
+        this.jieliuMove = null;
     }
 
     onMouseDown = (e) => {
-        if (e.target == this.self) {
+        if (e.target == this.self && this.props.type !== 'Slide') {
             this.dragging = true;
-            console.log(this.self);
-            
+
             this.tLeft = e.clientX;
             this.tTop = e.clientY;
             this.originX = this.model.data.x;

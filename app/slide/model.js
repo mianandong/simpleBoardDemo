@@ -6,9 +6,9 @@ export default class SlideModel extends BaseModel{
         this.data = {
             elements: [],
             x: 0,
-            y: '15%',
+            y: '10%',
             width: '100%',
-            height: '70%',
+            height: '80%',
             color: 'white'
         }
     }
