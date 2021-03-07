@@ -1,4 +1,5 @@
 import React from "react";
+import './index.css';
 
 export default class Ruler extends React.Component {
     constructor(props) {
@@ -6,11 +7,11 @@ export default class Ruler extends React.Component {
     }
 
     render = () => {
-        const { data } = this.props;
-        console.log('ruler data', data);
+        const { data } = this.props.model;
+        console.log('===ruler data===', data);
 
         return (
-            <div style={{width: `${data.width}px`, height: `${data.height}px`, backgroundColor: `${data.color}`}}>
+            <div id='rule-component'>
                 xuwei
             </div>
         );

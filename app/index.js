@@ -4,6 +4,7 @@ import App from './app';
 import ComponentManager from './componentManager';
 import Ruler from './ruler/index';
 import Slide from './slide/index';
+import './index.css';
 
 function createApp(container) {
     ReactDOM.render(<App />, container);

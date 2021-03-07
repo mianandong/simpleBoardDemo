@@ -4,14 +4,12 @@ export default class RulerModel extends BaseModel {
     constructor(props) {
         super(props);
         this.data = {
-            width: 100,
-            height: 20,
-            color: 'red'
+            width: 80,
+            height: 80,
+            color: 'red',
+            x: 100,
+            y: 0
         }
         window.xuwei = this.move;
-    }
-
-    move = (width) => {
-        this.set('width', width);
     }
 }

@@ -1,6 +1,9 @@
 export default class BaseModel {
     constructor(props) {
-        this.data = {};
+        this.data = {
+            x: 0,
+            y: 0
+        };
     }
 
     set = (key, vaule) => {
@@ -21,5 +24,10 @@ export default class BaseModel {
 
     static create() {
         return new this();
+    }
+
+    move = (x, y) => {
+        this.set('x', x);
+        this.set('y', y);
     }
 }
