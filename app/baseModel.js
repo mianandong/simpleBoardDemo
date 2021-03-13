@@ -16,14 +16,20 @@ export default class BaseModel {
         this.changeCallBack = cb;
     }
 
-    static create() {
+    static create(modelData, key) {
         const component = new this();
+        if (!key) {
+            key = Math.random().toString();
+        }
         component.data = {
             x: 0,
             y: 0,
             width: 40,
             height: 40,
-            ...component.data
+            opacity: 1,
+            key: key,
+            ...modelData,
+            ...component.data,
         }
         return component;
     }

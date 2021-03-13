@@ -11,9 +11,7 @@ export default class Ruler extends React.Component {
         console.log('===ruler data===', data);
 
         return (
-            <div id='rule-component'>
-                {data.word}
-            </div>
+            <div class="radar"></div>
         );
     }
 }

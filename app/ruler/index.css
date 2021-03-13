@@ -1,0 +1,83 @@
+.radar {
+    width: 8em;
+    height: 8em;
+    font-size: 32px;
+    background: linear-gradient(black, black);
+}
+
+.radar {
+    background: 
+            repeating-radial-gradient(
+                transparent 0, 
+                transparent 0.95em, 
+                darkgreen 0.95em, 
+                darkgreen 1em),
+            linear-gradient(black, black);
+}
+
+.radar {
+    background: 
+            linear-gradient(
+                90deg,
+                transparent 49.75%,
+                darkgreen 49.75%,
+                darkgreen 50.25%,
+                transparent 50.25%),
+            linear-gradient(
+                transparent 49.75%,
+                darkgreen 49.75%,
+                darkgreen 50.25%,
+                transparent 50.25%),
+            repeating-radial-gradient(
+                transparent 0, 
+                transparent 0.95em, 
+                darkgreen 0.95em, 
+                darkgreen 1em),
+            linear-gradient(black, black);
+}
+
+.radar {
+    position: relative;
+}
+
+.radar::before {
+    content: '';
+    position: absolute;
+    width: calc(8em / 2);
+    height: calc(8em / 2);
+}
+
+.radar::before {
+    background: linear-gradient(
+            45deg,
+            rgba(0, 0, 0, 0) 50%,
+            rgba(0, 192, 0, 1) 100%
+        );
+    border-radius: 100% 0 0 0;
+}
+
+.radar {
+    border-radius: 50%;
+}
+
+.radar {
+    width: calc(8em + 1.5em);
+    height: calc(8em + 1.5em);
+}
+
+.radar::before {
+    top: calc(1.5em / 2);
+    left: calc(1.5em / 2);
+}
+
+.radar::before {
+    animation: scanning 5s linear infinite;
+    transform-origin: 100% 100%;
+}
+
+@keyframes scanning {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
