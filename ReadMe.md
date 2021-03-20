@@ -7,7 +7,7 @@
 
 ### 功能演示
 
-![img](https://github.com/mianandong/simpleBoardDemo/blob/main/demo.gif)
+![image](./demo.gif)
 
 ### 实现概述
 - 组件组成
