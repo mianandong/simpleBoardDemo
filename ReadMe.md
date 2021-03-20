@@ -7,7 +7,7 @@
 
 ### 功能演示
 
-<iframe height=660 width=1425 src="./demo.gif">
+![img](https://github.com/mianandong/simpleBoardDemo/blob/main/demo.gif)
 
 ### 实现概述
 - 组件组成
