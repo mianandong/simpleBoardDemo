@@ -9,6 +9,11 @@
 
 ![image](./demo.gif)
 
+### 运行
+```
+npm run start
+```
+
 ### 实现概述
 - 组件组成
 ```
